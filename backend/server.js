@@ -1,25 +1,3 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import products from './data/products.js';
-
-dotenv.config();
-
-
-
-const port = process.env.PORT || 5000;
-const app = express()
-
-
-
-app.get('/', (req, res) => {
-    res.send('Hello Worldsssssssssssss!')
-});
-app.get('/api/products', async(req, res) => {
-   res.json(products);
-})
-app.get('/api/products/:id', async(req, res) => {
-   const product = products.find((p) => p._id === req.params.id);
-   res.json(product)
- })
-
-app.listen(port, () => console.log(`Server running on port ${port}`))
+version https://git-lfs.github.com/spec/v1
+oid sha256:36b689ad92cb0cd43b432d4ea5f6dbdc6f9020ffaf601b2428b7b383376e4a73
+size 572
